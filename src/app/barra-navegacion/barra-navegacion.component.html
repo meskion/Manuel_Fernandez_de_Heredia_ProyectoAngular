@@ -1,0 +1,10 @@
+<div id="menu">
+    <ul>
+        <li><button routerLink='/aboutUs' class="btn">about</button></li>
+        <li><button routerLink='/canales' class="btn">examples</button></li>
+        <li><button routerLink='/search' class="btn">search</button></li>
+        <li><button id="acceso" *ngIf="miToken == 0" class="acceso" routerLink='/login' class="btn">login</button></li>
+        <li id="acceso" *ngIf="miToken != 0" class="acceso"(click)="logout()"><span><strong>Usuario:</strong> {{ nombreUsuario }}</span></li>
+    </ul>
+
+</div>

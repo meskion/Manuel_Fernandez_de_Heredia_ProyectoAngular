@@ -1,0 +1,15 @@
+<div id="contenedor" class="form">
+    <form (ngSubmit)="submit()" #numberForm="ngForm">
+      <div class="form-group">
+        <label for="num">Number:</label>
+        <input type="text" [(ngModel)]="num.numero" name="numero" #numero="ngModel" required>
+        <div *ngIf="numero.invalid && numero.dirty" class="alert">
+          <div *ngIf="numero.errors?.required">Campo requerido </div>
+        </div>
+      </div>
+      <button type="submit" [disabled]="!numberForm.form.valid">search</button>
+    </form>
+<p> {{num.dato}}</p>
+
+  </div>
+  
